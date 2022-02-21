@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+body,td,th {
+	color: #FFFFFF;
+}
+body {
+	background-color: #000000;
+}
+-->
+</style></head>
+
+<body>
+<div id="Layer1" style="position:absolute; left:411px; top:11px; width:470px; height:52px; z-index:1">
+  <div align="center"><h2>
+<script language="JavaScript1.2">
+
+/*
+Neon Lights Text
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+var message="CARACTERISTICAS DEL SOFTWARE"
+var neonbasecolor="black"
+var neontextcolor="lime"
+var flashspeed=100  //in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",1500)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+</h2>
+
+<p align="center"><br />
+<a href="http://javascriptkit.com"></a></p></div>
+</div>
+<div id="Layer2" style="position:absolute; left:12px; top:84px; width:395px; height:248px; z-index:2">
+  <p>Sus principales caracteristicas del software son:</p>
+  <p>1- Correcion: debe cumplir con su objetivo </p>
+  <p>2-Usabilidad: que sea facil de aprender o usar</p>
+  <p>3-Seguridad: debe ser resistentes a ataques externos </p>
+  <p>4-Flexibilidad: que sea facil de ser modificado por los desarroladores </p>
+  <p>5-Portabilidad: que pueda ser utilizado en diversos equipos </p>
+</div>
+<div id="Layer3" style="position:absolute; left:442px; top:94px; width:369px; height:233px; z-index:3"><img src="software%205.jpg" width="369" height="235"></div>
+</body>
+</html>
